@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load a sample dataset
+df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv')
+
+# Display the first few rows of the dataset
+print(df.head())
+
+# Simple visualization - Total bill vs. Tip
+plt.figure(figsize=(10, 6))
+plt.scatter(df['total_bill'], df['tip'], alpha=0.5)
+plt.title('Total Bill vs. Tip')
+plt.xlabel('Total Bill')
+plt.ylabel('Tip')
+plt.grid(True)
+plt.show()
